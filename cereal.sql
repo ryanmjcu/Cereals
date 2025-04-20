@@ -283,6 +283,14 @@ GROUP BY sugar_level
 ;
 
 
+-- Are more sugary cereals sold in larger boxes?
+SELECT  
+    weight,
+    ROUND(AVG(sugars), 2) AS avg_sugars
+FROM cereal
+GROUP BY weight
+ORDER BY weight DESC;
+    
 
 -- 3 Most and 3 least calorically dense cereals
 
@@ -316,3 +324,4 @@ FROM low_cal_density
 
 ORDER BY cals_per_cup DESC
 ;
+
