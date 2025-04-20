@@ -156,7 +156,7 @@ LIMIT 5;
 -- Most common manufacturer
 SELECT  
     mfr,
-    COUNT(*) AS mfr_count,
+    COUNT(*) AS product_count,
     ROUND((100.0 * COUNT(*) / (SELECT COUNT(*) FROM cereal)), 2) AS perc_of_cereals
 FROM cereal
 GROUP BY mfr
@@ -274,11 +274,11 @@ LIMIT 5;
 SELECT  
     CASE WHEN sugars <=5 THEN 'Low Sugar'
         WHEN sugars BETWEEN 6 AND 10 THEN 'Moderate Sugar' 
-        WHEN sugars > 10 THEN 'Very Sugary' 
-    ELSE 'Unknown sugars'
+    ELSE 'Very Sugary' 
     END AS sugar_level,
     ROUND(AVG(rating), 2) AS avg_rating
 FROM cereal
+WHERE sugars IS NOT NULL
 GROUP BY sugar_level
 ;
 
