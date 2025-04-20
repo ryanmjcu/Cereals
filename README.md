@@ -263,6 +263,17 @@ FROM low_cal_density
 ORDER BY cals_per_cup DESC
 ;
 ```
+
+| name                  | cals_per_cup |
+|-----------------------|--------------|
+| Grape-Nuts            | 440.00       |
+| Great Grains Pecan    | 363.64       |
+| Oatmeal Raisin Crisp  | 260.00       |
+| Kix                   | 73.33        |
+| Puffed Rice           | 50.00        |
+| Puffed Wheat          | 50.00        |
+
+
 Again we see the bottom 3 as the plainly flavored varieties, but now we can see how these types of cereal compare with the most calorically dense options. We see that cereals with nuts and fruits incorporated have greatly increased calories per serving size. This makes sense especially for the products with nuts, as those are a very calorie dense type of food.
 
 # What I learned
